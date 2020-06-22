@@ -6,6 +6,7 @@
         - verify pswrd format
         - confirm password
 3. if login, check credentials, if not present say invalid credentials
+#uses the text file credentials.txt
 
 
 """
