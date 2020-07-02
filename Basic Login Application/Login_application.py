@@ -6,6 +6,7 @@
         - verify pswrd format
         - confirm password
 3. if login, check credentials, if not present say invalid credentials
+#uses the text file credentials.txt
 
 
 """
@@ -104,17 +105,20 @@ if choice.casefold() == "create account":
 
     print(f"New Account with UserID {userid} was created successfully.")        
     
-
+#Checking credentials for Login
 elif choice.casefold() == "login":
     userid = input("Enter UserID\n")
     pswrd = input("Enter Password\n")
     logincheck = 0
     login_bool = True
+    
+    #mapping file string to dictionary
     with open(r"credentials.txt", "r") as file:
         data = file.read()
         dict1 = json.loads(data)
         print(dict1.items())
-        
+    
+    #checking for usernid-password key-value pair
     while login_bool:
         for key,value in dict1.items():
             if dict1[userid] == pswrd:
