@@ -1,0 +1,1 @@
+These are all the algorithm problems assigned for the Algorithms and Data Structures course of InternSearch
